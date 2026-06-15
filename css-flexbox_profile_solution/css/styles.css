@@ -28,8 +28,8 @@ h2 {
   object-fit: cover;
   border-radius: 999px;
   aspect-ratio: 1 / 1;
-  border: solid #3f0097 1px;
   max-width: 50%;
+  border: solid #3f0097 1px;
   align-self: center;
 }
 
