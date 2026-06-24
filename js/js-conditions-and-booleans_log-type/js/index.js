@@ -1,4 +1,4 @@
-const data = true;
+const data = null;
 
 switch (true) {
   case Number.isNaN(data):
