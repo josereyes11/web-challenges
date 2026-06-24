@@ -1,6 +1,6 @@
 console.clear();
 
-/* Part 1: Password
+// Part 1: Password
 const SUPER_SECRET_PASSWORD = "h4x0r1337";
 const receivedPassword = "password1234";
 
@@ -9,9 +9,8 @@ if (receivedPassword === "h4x0r1337") {
 } else {
   console.log("Access denied!");
 }
-*/
 
-/* Part 2: Even / Odd
+// Part 2: Even / Odd
 const number = 7;
 
 if (number % 2 === 0) {
@@ -19,7 +18,6 @@ if (number % 2 === 0) {
 } else {
   console.log("odd number");
 }
-*/
 
 // Part 3: Hotdogs
 const numberOfHotdogs = 132;
@@ -49,17 +47,16 @@ if (numberOfHotdogs < 5) {
 }
 */
 
-/* Part 4: Daytime
+// Part 4: Daytime
 const currentHour = 12;
 
-const statement = "";
+const statement = currentHour < 17 ? "Still need to learn..." : "Party time!!!";
 
 console.log(statement);
 
 // Part 5: Greeting
-const userName = "Archibald";
+const userName = "Jose";
 
-const greeting = "Hello " + "//enter your code here" + "!";
+const greeting = "Hello " + (userName === "Melina" ? "Coach" : userName) + "!";
 
 console.log(greeting);
-*/
