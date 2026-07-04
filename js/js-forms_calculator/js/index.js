@@ -24,6 +24,37 @@ form.addEventListener("submit", (event) => {
 
   let result;
 
+  const formData = new FormData(event.target);
+  const data = Object.fromEntries(formData);
+
+  const NumberA = Number(data.NumberA);
+  const NumberB = Number(data.NumberB);
+  const operator = data.operator;
+
+  if (operator === "addition") {
+    result = add(NumberA, NumberB);
+  }
+
+  if (operator === "subtraction") {
+    result = subtract(NumberA, NumberB);
+  }
+  if (operator === "multiplication") {
+    result = multiply(NumberA, NumberB);
+  }
+  if (operator === "division") {
+    result = divide(NumberA, NumberB);
+  }
+
+  resultOutput.textContent = result;
+});
+
+/*
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  let result;
+
   const formData = new FormData(form);
   const data = Object.fromEntries(formData);
 
@@ -46,3 +77,5 @@ form.addEventListener("submit", (event) => {
   }
   resultOutput.textContent = result;
 });
+
+*/
