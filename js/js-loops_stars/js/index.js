@@ -7,7 +7,6 @@ function renderStars(filledStars) {
 
   for (let i = 1; i <= 5; i++) {
     const img = document.createElement("img");
-    img.src = "assets/star-empty.svg";
 
     if (i <= filledStars) {
       img.src = "assets/star-filled.svg";
@@ -22,3 +21,9 @@ function renderStars(filledStars) {
 }
 
 renderStars();
+
+/*
+
+img.src= i <= filledStars ? "assets/star-filled.svg" : "assets/star-empty.svg";
+
+*/
