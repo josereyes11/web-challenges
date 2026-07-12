@@ -25,14 +25,38 @@ const cards = [
 ];
 
 const onlyCardWithIdTwo = cards.filter((card) => {
-  return card.startsWith("");
+  return card.id === "2";
 });
 
-const allCardsWith3Tags = ;
+console.log(onlyCardWithIdTwo);
 
-const allCardsThatAreNotBookmarked = ;
+console.log("______________________________________________");
 
-const allCardsWithTagsHTMLOrJSThatAreBookmarked = ;
+const allCardsWith3Tags = cards.filter((card) => {
+  return card.tags.length === 3;
+});
+
+console.log(allCardsWith3Tags);
+
+console.log("______________________________________________");
+
+const allCardsThatAreNotBookmarked = cards.filter((card) => {
+  return !card.isBookmarked;
+  //return card.isBookmarked === false;
+});
+
+console.log(allCardsThatAreNotBookmarked);
+
+console.log("______________________________________________");
+
+const allCardsWithTagsHTMLOrJSThatAreBookmarked = cards.filter((card) => {
+  return (
+    (card.tags.includes("html") || card.tags.includes("js")) &&
+    card.isBookmarked
+  );
+});
+
+console.log(allCardsWithTagsHTMLOrJSThatAreBookmarked);
 
 export {
   onlyCardWithIdTwo,
