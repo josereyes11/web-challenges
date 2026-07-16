@@ -1,0 +1,24 @@
+{
+  "name": "react-challenges",
+  "private": true,
+  "workspaces": [
+    "react-basics_attributes",
+    "react-basics_attributes_solution",
+    "react-basics_hello-world",
+    "react-basics_hello-world-article",
+    "react-nesting_buttons-and-children",
+    "react-nesting_fragments",
+    "react-nesting_navigation",
+    "react-props_greeting",
+    "react-props_sum",
+    "react-state-1_box",
+    "react-state-1_counter",
+    "react-state-2_colored-number",
+    "react-state-2_table-reservation",
+    "react-state-3_adding-animals",
+    "react-state-3_tags",
+    "react-state-3_journal-app-form",
+    "react-with-arrays_fruits",
+    "react-with-arrays_users"
+  ]
+}
