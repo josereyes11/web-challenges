@@ -88,3 +88,5 @@ export function logInfo(city) {
 console.log(
   logInfo({ name: "Marseille", country: "France", population: 861635 }),
 );
+
+console.log(logInfo);

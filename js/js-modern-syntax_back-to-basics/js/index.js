@@ -1,17 +1,14 @@
-/*
-Now that you've practiced destructuring, default parameters, and the spread operator,
-try reversing the challenge by rewriting this code without using these modern features.
-*/
+export function getRelocatedCity(city1, city2) {
+  if (city2 === undefined) {
+    city2 = { name: "Berlin", country: "Germany" };
+  }
+  const cityData = getNameAndCountry(city2);
+  const country = cityData[1];
+  const relocatedCity = {};
 
-export const getNameAndCountry = ({ name, country }) => [name, country];
-
-export const getRelocatedCity = (
-  city1,
-  city2 = { name: "Berlin", country: "Germany" }
-) => {
-  const [, country] = getNameAndCountry(city2);
-  return {
-    ...city1,
-    country,
-  };
-};
+  for (const key in city1) {
+    relocatedCity[key] = city1[key];
+  }
+  relocatedCity.country = country;
+  return relocatedCity;
+}

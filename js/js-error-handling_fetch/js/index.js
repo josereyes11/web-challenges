@@ -9,8 +9,17 @@ async function fetchUserData(url) {
     const response = await fetch(url, {
       headers: { "x-api-key": "reqres_c0aaf46c1fa2400e8fb8669bacd63171" },
     });
+    if (!response.ok) {
+      throw new Error(`Failed to fetch data! Status Code: ${response.status}`);
+    }
+
+    const contentType = response.headers.get("content-type");
+    if (!contentType || !contentType.includes("application/json")) {
+      throw new Error(`Failed to fetch content: ${contentType}`);
+    }
 
     return await response.json();
+    
   } catch (error) {
     return { error: error.message };
   }
